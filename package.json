@@ -1,7 +1,7 @@
 {
     "name": "KroLauncher",
     "preductname": "KroLauncher",
-    "version": "1.0.8",    "description": "Launcher Mincraft pour Opalysie",
+    "version": "1.0.9",    "description": "Launcher Mincraft pour Opalysie",
     "main": "src/app.js",
     "author": {
         "name": "luuxis, Creat-Dev, Inc.",
