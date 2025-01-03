@@ -1,3 +1,17 @@
+/* Global styles */
+:root {
+    --background: #2C2F3A;
+    --background-transparent: rgba(0, 0, 0, 0.5);
+    --background-hover: rgba(0, 0, 0, 0.2);
+    --color: #FFFFFF;
+    --shadow: #1A1D23;
+    --hover-background: rgba(255, 255, 255, 0.1);
+    --element-color: #1AC707; /* Green color */
+    --svg-color: #FFFFFF; /* Default icon color */
+    --hover-color: #FF0409; /* Hover color */
+}
+
+/* Container Home */
 .home .container {
     display: flex;
     height: 100%;
@@ -5,12 +19,7 @@
     align-items: center;
 }
 
-/*******************************************************************************
-
- * Status server
-
- ******************************************************************************/
-
+/* Status server */
 .status-server {
     position: relative;
     display: flex;
@@ -24,15 +33,16 @@
     margin-top: 3rem;
     padding: 1rem;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Lors du survol du bloc serveur */
 .status-server:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    filter: blur(3px);
 }
 
+/* Icône de statut serveur */
 .server-status-icon {
     height: 3.3rem;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -43,6 +53,7 @@
     opacity: 0.8;
 }
 
+/* Nom et texte du serveur */
 .server-status-name {
     font-size: 1.5rem;
     color: var(--color);
@@ -53,16 +64,12 @@
     color: #1AC707;
 }
 
-.server-status-infos .red {
-    color: #FF0409;
-}
-
+/* Compteur de joueurs */
 .status-player-count {
     background: var(--shadow);
     min-width: 3rem;
     height: 3rem;
     border-radius: 10px;
-    position: relative;
 }
 
 .player-count {
@@ -86,19 +93,7 @@
     background: #FF0409;
 }
 
-.home-bottom {
-    position: relative;
-    width: 100%;
-    height: calc(100% - 80px - 8rem);
-    display: flex;
-}
-
-/*******************************************************************************
-
- * News server
-
- ******************************************************************************/
-
+/* News server */
 .new-tab {
     display: flex;
     flex-direction: column;
@@ -128,27 +123,22 @@
     margin: 0 0 1rem 0;
     border-radius: 10px;
     background: var(--background-transparent);
-    transition: transform 0.3s ease, background 0.3s ease, filter 0.3s ease;
-    overflow: hidden;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
+/* Animation survol des news */
 .news-block:hover {
     background: var(--background-hover);
-    transform: translateY(-5px);
+    transform: scale(1.05); /* Zoom subtil */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    filter: blur(2px);
 }
 
-.news-block:hover .news-header {
-    transform: scale(1.05);
-}
-
+/* Contenu de la news */
 .news-header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
     align-items: center;
-    transition: transform 0.3s ease;
 }
 
 .header-text .title {
@@ -164,6 +154,7 @@
     align-items: center;
 }
 
+/* Info news */
 .news-content .bbWrapper {
     padding: 0 1.5rem;
     padding-bottom: 1rem;
@@ -185,12 +176,7 @@
     font-weight: 700;
 }
 
-/*******************************************************************************
-
- * Social server
-
- ******************************************************************************/
-
+/* Social server */
 .social-tab {
     position: absolute;
     display: flex;
@@ -218,11 +204,13 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+/* Animation survol des icônes des réseaux sociaux */
 .social-block:hover {
     transform: scale(1.1);
+    filter: none; /* Pas de blur sur l'icône */
     background: var(--hover-background);
 }
 
@@ -234,12 +222,7 @@
     filter: var(--svg-color);
 }
 
-/*******************************************************************************
-
- * Sidebar
-
- ******************************************************************************/
-
+/* Sidebar */
 .sidebar {
     display: flex;
     justify-content: space-between;
@@ -317,11 +300,6 @@
     border-radius: 15px;
     padding: 0 0.5rem;
     cursor: pointer;
-}
-
-.instance-select:before {
-    transform: rotate(270deg);
-    pointer-events: none;
 }
 
 .info-starting-game {
