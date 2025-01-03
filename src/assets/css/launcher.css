@@ -68,7 +68,7 @@ input::-webkit-inner-spin-button {
     display: table-cell;
     width: 30px;
     height: 26px;
-    transition: color .2s, background-color .2s;
+    transition: color .2s, background-color .2s, transform .2s;
     color: black;
     cursor: pointer;
 }
@@ -81,6 +81,10 @@ input::-webkit-inner-spin-button {
     height: 14px;
     font-size: 14px;
     color: #f8f9f9;
+}
+
+.button-frame:hover {
+    transform: scale(1.1);
 }
 
 .icon-close:hover {
@@ -102,6 +106,13 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.popup.show {
+    display: flex;
+    opacity: 1;
 }
 
 .popup-tab {
@@ -143,9 +154,10 @@ input::-webkit-inner-spin-button {
     opacity: 0;
     z-index: 0;
     pointer-events: none;
+    transition: opacity .5s ease-in-out;
 }
 
-.active {
+.panel.active {
     opacity: 1;
     z-index: 1;
     pointer-events: all;
