@@ -5,12 +5,7 @@
     align-items: center;
 }
 
-/*******************************************************************************
-
- * Status server
-
- ******************************************************************************/
-
+/* Status server */
 .status-server {
     position: relative;
     display: flex;
@@ -30,7 +25,7 @@
 .status-server:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    filter: blur(3px);
+    filter: blur(3px); /* Applique le flou au fond */
 }
 
 .server-status-icon {
@@ -92,12 +87,7 @@
     display: flex;
 }
 
-/*******************************************************************************
-
- * news server
-
- ******************************************************************************/
-
+/* News server */
 .new-tab {
     display: flex;
     flex-direction: column;
@@ -127,13 +117,15 @@
     margin: 0 0 1rem 0;
     border-radius: 10px;
     background: var(--background-transparent);
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, backdrop-filter 0.3s ease;
+    backdrop-filter: blur(10px); /* Applique le flou de fond */
 }
 
 .news-block:hover {
     background: var(--background-hover);
     transform: translateY(-5px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: none; /* Enlève le flou lorsque l'on survole */
 }
 
 .news-header {
@@ -177,12 +169,7 @@
     font-weight: 700;
 }
 
-/*******************************************************************************
-
- * social server
-
- ******************************************************************************/
-
+/* Social server */
 .social-tab {
     position: absolute;
     display: flex;
@@ -227,12 +214,7 @@
     filter: var(--svg-color);
 }
 
-/*******************************************************************************
-
- * sidebar
-
- ******************************************************************************/
-
+/* Sidebar */
 .sidebar {
     display: flex;
     justify-content: space-between;
