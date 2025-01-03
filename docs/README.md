@@ -1,6 +1,6 @@
 # KROLauncher
 
-![KROLauncher](KROlauncher.png)
+<p align="center"><img src="../src/assets/images/icon.png" alt="icon-launcher"></p>
 
 ## Description
 KROLauncher est un launcher Minecraft personnalisé qui offre une expérience de jeu améliorée avec des fonctionnalités supplémentaires et une interface utilisateur conviviale.
