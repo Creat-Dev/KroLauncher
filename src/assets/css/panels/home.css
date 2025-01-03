@@ -6,9 +6,9 @@
 }
 
 /*******************************************************************************
- *                                                                             *
- * Status server                                                               *
- *                                                                             *
+
+ * Status server
+
  ******************************************************************************/
 
 .status-server {
@@ -24,10 +24,23 @@
     margin-top: 3rem;
     padding: 1rem;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.status-server:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    filter: blur(3px);
 }
 
 .server-status-icon {
     height: 3.3rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.server-status-icon:hover {
+    transform: rotate(15deg);
+    opacity: 0.8;
 }
 
 .server-status-name {
@@ -80,9 +93,9 @@
 }
 
 /*******************************************************************************
- *                                                                             *
- * news server                                                                 *
- *                                                                             *
+
+ * news server
+
  ******************************************************************************/
 
 .new-tab {
@@ -114,6 +127,13 @@
     margin: 0 0 1rem 0;
     border-radius: 10px;
     background: var(--background-transparent);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.news-block:hover {
+    background: var(--background-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .news-header {
@@ -140,13 +160,11 @@
     padding: 0 1.5rem;
     padding-bottom: 1rem;
     font-size: 1.2rem;
-
 }
 
 .news-content .bbWrapper p {
     font-weight: 100;
     margin: 0;
-
 }
 
 .news-content .bbWrapper .news-author {
@@ -160,9 +178,9 @@
 }
 
 /*******************************************************************************
- *                                                                             *
- * social server                                                               *
- *                                                                             *
+
+ * social server
+
  ******************************************************************************/
 
 .social-tab {
@@ -192,6 +210,13 @@
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-block:hover {
+    transform: scale(1.1);
+    filter: blur(2px);
+    background: var(--hover-background);
 }
 
 .social-block .icon-social {
@@ -203,9 +228,9 @@
 }
 
 /*******************************************************************************
- *                                                                             *
- * sidebar                                                                     *
- *                                                                             *
+
+ * sidebar
+
  ******************************************************************************/
 
 .sidebar {
@@ -320,6 +345,12 @@
     font-size: 3rem;
     color: var(--element-color);
     margin: 0 1.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.settings-btn:hover {
+    transform: scale(1.1);
+    color: var(--hover-color);
 }
 
 .instance-popup {
@@ -367,10 +398,12 @@
     margin: 0.5rem 0;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .instance-elements:hover {
     background: var(--element-color);
+    transform: scale(1.05);
 }
 
 .active-instance {
